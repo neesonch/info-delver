@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import { Card } from './schema';
+import Dashboard from './components/Dashboard/Dashboard';
 
-function App() {
+interface AppProps {
+  schema: Card[]
+}
+
+function App({ schema }: AppProps) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <Dashboard cards={schema} />
+    </AppWrapper>
   );
 }
+
+const AppWrapper = styled.div`
+  --props-default-background-color: #0d0d0f;
+
+  background-color: var(--props-default-background-color);
+  color: white;
+  min-height: 100vh;
+`;
 
 export default App;
