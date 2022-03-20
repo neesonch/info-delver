@@ -1,44 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Card } from '../../schema';
-import GenericCard from '../Cards/GenericCard';
-import HorizontalCard from '../Cards/HorizontalCard';
-import VerticalCard from '../Cards/VerticalCard';
+import getCardComponent from '../../utils/get-card-component';
 
 interface DashboardProps {
   cards: Card[]
 }
 
 const Dashboard = ({ cards }: DashboardProps) => {
-  console.log('CARDS: ', cards);
+  //console.log('CARDS: ', cards);  //DEBUG
   return (
-    <DashboardWrapper>
+    <CardsContainer>
       {cards.map(card => {
         return (
-          getCard(card)
+          getCardComponent(card)
         );
       })}
-    </DashboardWrapper>
+    </CardsContainer>
   )
 }
 
-const getCard = (card: Card) => {
-  const { type, title, toggles } = card;
-  switch (type) {
-    case 'Horizontal':
-      return <HorizontalCard title={title} toggles={toggles} />
-    case 'Vertical':
-      return <VerticalCard title={title} toggles={toggles} />
-    default:
-      return null;
-  }
-}
 
-const DashboardWrapper = styled.div`
+
+const CardsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: flex-start;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 export default Dashboard;

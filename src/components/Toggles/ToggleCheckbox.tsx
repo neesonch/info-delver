@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 interface ToggleCheckboxProps {
   id: string;
+  handleToggle?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const ToggleCheckbox = ({ id }: ToggleCheckboxProps) => {
+const ToggleCheckbox = ({ id, handleToggle }: ToggleCheckboxProps) => {
   return (
     <ToggleCheckboxWrapper>
-      <Slider id={id} /><Notch htmlFor={id}></Notch>
+      <Slider id={id} onChange={(e) => { if (handleToggle) { handleToggle(e.target.checked) } }} /><Notch htmlFor={id}></Notch>
     </ToggleCheckboxWrapper>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Toggle } from '../../schema';
 import BasicToggle from '../Toggles/BasicToggle';
+import getToggleComponent from '../../utils/get-toggle-component';
 
 interface VerticalCardProps {
   title: string;
@@ -14,12 +15,15 @@ const VerticalCard = ({ title, toggles }: VerticalCardProps) => {
       <CardTitle>{title}</CardTitle>
       <TogglesContainer>
         {toggles.map(toggle => {
-          const { id, label } = toggle;
-          return (
-            <ToggleWrapper key={id}>
-              <BasicToggle label={label} id={id} key={id} />
-            </ToggleWrapper>
-          );
+          if (toggle.type) {
+            return (
+              <ToggleWrapper key={toggle.id}>
+                {getToggleComponent(toggle)}
+              </ToggleWrapper>
+            )
+          } else {
+            return null;
+          }
         }
         )}
       </TogglesContainer>
@@ -28,11 +32,13 @@ const VerticalCard = ({ title, toggles }: VerticalCardProps) => {
 }
 
 const CardWrapper = styled.div`
-  min-width: 33%;
+  flex-basis: 33%;
   display: inline-block;
-  border: 1px solid red;
-  flex-shrink: 0;
   background-color: #292e31;
+  margin-left: 10px;
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;
 
 const CardTitle = styled.div`
@@ -42,12 +48,13 @@ const CardTitle = styled.div`
 
 const TogglesContainer = styled.div`
   width: 100%;
+  padding-left: 5%;
 `;
 
 const ToggleWrapper = styled.div`
   display: inline-block;
   background: #18191d;
-  border-radius: 10%;
+  border-radius: 5%;
   min-width: 90%;
   padding: 5px;
   margin-top: 0px;

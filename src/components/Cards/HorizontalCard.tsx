@@ -29,7 +29,7 @@ const HorizontalCard = ({ title, toggles }: HorizontalCardProps) => {
 }
 
 const CardWrapper = styled.div`
-  min-width: 90%;
+  flex-basis: 100%;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -51,8 +51,12 @@ const ToggleWrapper = styled.div`
   background: #18191d;
   border-radius: 10%;
   min-width: 30%;
+  flex-basis: 30%;
   padding: 5px;
   margin: 5px;
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;
 
 export default HorizontalCard;
