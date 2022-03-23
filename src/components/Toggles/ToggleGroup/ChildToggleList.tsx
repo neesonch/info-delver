@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Toggle } from '../../../schema';
 import getToggleComponent from '../../../utils/get-toggle-component';
@@ -15,7 +15,7 @@ const ChildToggleList = ({ toggles, expanded }: ChildToggleListProps) => {
       {expanded && toggles.map(toggle => {
         return (
           getToggleComponent(toggle)
-        )
+        );
       })}
     </ChildToggleListContainer>
   );

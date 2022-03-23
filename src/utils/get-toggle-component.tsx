@@ -9,15 +9,15 @@ const getToggleComponent = (toggle: Toggle | DropdownToggle | GroupToggle) => {
   const { label, id, type } = toggle;
   switch (type) {
     case BASIC:
-      return <BasicToggle label={label} id={id} />
+      return <BasicToggle label={label} id={id} key={id} />
     case PARENT:
       if ('childToggles' in toggle) {
-        return <ToggleGroup label={label} id={id} childToggles={toggle.childToggles} />
+        return <ToggleGroup label={label} id={id} childToggles={toggle.childToggles} key={id} />
       }
       break;
     case NUMBER_DROPDOWN:
       if ('min' in toggle) {
-        return <ToggleNumberDropdown label={label} id={id} min={toggle.min} max={toggle.max} />
+        return <ToggleNumberDropdown label={label} id={id} min={toggle.min} max={toggle.max} key={id} />
       }
       break;
     default:
