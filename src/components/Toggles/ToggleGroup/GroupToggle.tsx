@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Toggle } from '../../../schema';
 import ToggleCheckbox from '../ToggleCheckbox';
 import ChildToggleList from './ChildToggleList';
 import Chevron from './Chevron';
-import getToggleComponent from '../../../utils/get-toggle-component';
 
 
 interface GroupToggleProps {
@@ -17,20 +16,15 @@ const GroupToggle = ({ label, id, childToggles }: GroupToggleProps) => {
 
   const [expanded, setExpanded] = useState(false);
 
-
-  useEffect(() => {
-    console.log(expanded); //DEBUG
-  }, [expanded]);
-
   return (
     <GroupToggleWrapper>
       <ParentToggleWrapper>
-        <ToggleLabel>{label}</ToggleLabel>
-        <ToggleCheckbox id={`checkbox-${id}`} handleToggle={setExpanded} />
+        <ToggleLabel htmlFor={id}> {label}</ToggleLabel>
+        <ToggleCheckbox id={id} handleToggle={setExpanded} />
         <Chevron expanded={expanded} />
       </ParentToggleWrapper>
       {childToggles && <ChildToggleList toggles={childToggles} expanded={expanded} />}
-    </GroupToggleWrapper>
+    </GroupToggleWrapper >
   );
 }
 
@@ -39,25 +33,14 @@ const GroupToggleWrapper = styled.div`
 `;
 
 const ParentToggleWrapper = styled.div`
-
+  display: flex;
+  align-items: center;
 `;
 
-interface ChildrenToggleContainerProps {
-  expanded: boolean;
-}
-
-// const ChildrenToggleContainer = styled.div<ChildrenToggleContainerProps>`
-// transition: all ease-in-out 0.3s;
-// ${props => props.expanded ? `
-//   opacity: 1;
-// `: `
-//   opacity: 0
-// `
-//   };
-// `;
-
-const ToggleLabel = styled.div`
-  display: inline-block;
+const ToggleLabel = styled.label`
+  display: flex;
+  padding-left: 10%;
+  flex-grow: 6;
 `
 
 export default GroupToggle;

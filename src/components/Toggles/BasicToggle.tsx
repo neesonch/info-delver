@@ -11,9 +11,9 @@ interface BasicToggleProp {
 const BasicToggle = ({ label, id }: BasicToggleProp) => {
   return (
     <BasicToggleWrapper>
-      <ToggleLabel>{label}</ToggleLabel>
+      <ToggleLabel htmlFor={id}>{label}</ToggleLabel>
       <ToggleCheckboxWrapper>
-        <ToggleCheckbox id={`checkbox-${id}`} />
+        <ToggleCheckbox id={id} />
       </ToggleCheckboxWrapper>
     </BasicToggleWrapper>
   );
@@ -24,7 +24,7 @@ const BasicToggleWrapper = styled.div`
   align-items: center;
 `;
 
-const ToggleLabel = styled.div`
+const ToggleLabel = styled.label`
   display: flex;
   padding-left: 10%;
   flex-grow: 6;

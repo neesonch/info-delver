@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { IoChevronDown } from 'react-icons/io5';
 import styled from 'styled-components';
 
@@ -21,6 +21,9 @@ const ChevronWrapper = styled.div<ChevronWrapper>`
 display: inline-block;
 transition: all ease-in-out 0.3s;
 transform-origin: center;
+max-height: 1em;
+margin-left: 0.5em;
+margin-right: 0.25em;
 ${props => props.expanded ? `
 transform: rotate(-180deg);
 `: `

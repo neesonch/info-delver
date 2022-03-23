@@ -4,11 +4,11 @@ import { Card } from '../../schema';
 import getCardComponent from '../../utils/get-card-component';
 
 interface DashboardProps {
-  cards: Card[]
+  cards: Card[];
 }
 
 const Dashboard = ({ cards }: DashboardProps) => {
-  //console.log('CARDS: ', cards);  //DEBUG
+
   return (
     <CardsContainer>
       {cards.map(card => {
@@ -20,8 +20,6 @@ const Dashboard = ({ cards }: DashboardProps) => {
   )
 }
 
-
-
 const CardsContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -32,5 +30,6 @@ const CardsContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
+
 
 export default Dashboard;

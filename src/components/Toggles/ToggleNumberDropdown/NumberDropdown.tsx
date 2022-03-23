@@ -11,7 +11,7 @@ const NumberDropdown = ({ active, min, max }: NumberDropdownProps) => {
   const options = [];
 
   for (let i = min; i <= max; i++) {
-    options.push(<DropdownOption key={i} value={i}>{i}</DropdownOption>)
+    options.push(<option key={i} value={i}>{i}</option>)
   }
 
   return (
@@ -24,15 +24,19 @@ const NumberDropdown = ({ active, min, max }: NumberDropdownProps) => {
 }
 
 const DropdownWrapper = styled.div`
-
+  margin-right: 0.25em
 `;
 
 const DropdownSelect = styled.select`
-
+  color: white;
+  background-color: #101012;
+  border: none;
+  width: 4.5em;
+  padding-left: 0.75em;
+  &:disabled {
+    color: dimgrey;
+  }
 `;
 
-const DropdownOption = styled.option`
-
-`;
 
 export default NumberDropdown;

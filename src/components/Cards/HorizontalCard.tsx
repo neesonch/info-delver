@@ -11,7 +11,7 @@ interface HorizontalCardProps {
 
 const HorizontalCard = ({ title, toggles }: HorizontalCardProps) => {
   return (
-    <CardWrapper>
+    <CardWrapper key={title}>
       <CardTitle>{title}</CardTitle>
       <TogglesContainer>
         {toggles.map(toggle => {
@@ -36,8 +36,11 @@ const CardWrapper = styled.div`
 `;
 
 const CardTitle = styled.div`
-  font-size: 18;
+  font-size: 1.125em;
   font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 1.25em;
 `;
 
 const TogglesContainer = styled.div`
@@ -49,10 +52,13 @@ const TogglesContainer = styled.div`
 const ToggleWrapper = styled.div`
   display: inline-block;
   background: #18191d;
-  border-radius: 10%;
+  border-radius: 0.25em;
   min-width: 30%;
   flex-basis: 30%;
-  padding: 5px;
+  padding-left: 0.3125em;
+  padding-right: 0.3125em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin: 5px;
   @media (max-width: 768px) {
     flex-basis: 100%;

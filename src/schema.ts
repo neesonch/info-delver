@@ -1,18 +1,11 @@
 
-export interface HorizontalCard {
-  title: string;
-}
-
-export interface VerticalCard {
-  title: string;
-}
+import { v4 as uuidv4 } from 'uuid';
 
 export interface Card {
   id: string;
   title: string;
   type: string;
   toggles: Array<Toggle | DropdownToggle | GroupToggle>
-
 }
 
 export interface Toggle {
@@ -30,76 +23,77 @@ export interface DropdownToggle extends Toggle {
   max: number;
 }
 
+
 export const schema: Card[] = [
   {
-    id: 'a1',
+    id: uuidv4(),
     title: 'GENERAL',
     type: 'Horizontal',
     toggles: [
       {
-        id: 'z0',
+        id: uuidv4(),
         label: 'CASE MANAGEMENT',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'z1',
+        id: uuidv4(),
         label: 'MAP TIMELINE',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'z2',
+        id: uuidv4(),
         label: 'VIEWS & BRIEFINGS',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'z3',
+        id: uuidv4(),
         label: 'NOTIFICATIONS',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'z4',
+        id: uuidv4(),
         label: 'MASS COMMUNICATIONS',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'z5',
+        id: uuidv4(),
         label: 'TRAFFIC CAMERAS',
-        type: 'Basic'
+        type: 'Basic',
       },
     ],
   },
   {
-    id: 'b2',
+    id: uuidv4(),
     title: 'SETTINGS',
     type: 'Vertical',
     toggles: [
       {
-        id: 'x0',
+        id: uuidv4(),
         label: 'AUDIT LOG',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'x1',
+        id: uuidv4(),
         label: 'USERS',
         type: 'Parent',
         childToggles: [
           {
-            id: 'w0',
+            id: uuidv4(),
             label: 'USERS ADD',
-            type: 'Basic'
+            type: 'Basic',
           },
           {
-            id: 'w1',
+            id: uuidv4(),
             label: 'USERS DELETE',
-            type: 'Basic'
+            type: 'Basic',
           },
           {
-            id: 'w2',
+            id: uuidv4(),
             label: 'USERS EDIT',
-            type: 'Basic'
+            type: 'Basic',
           },
           {
-            id: 'w3',
+            id: uuidv4(),
             label: 'MAX USERS',
             type: 'NumberDropdown',
             min: 1,
@@ -108,24 +102,24 @@ export const schema: Card[] = [
         ]
       },
       {
-        id: 'x2',
+        id: uuidv4(),
         label: 'SOME OTHER SETTING',
-        type: 'Basic'
+        type: 'Basic',
       },
     ],
   },
   {
-    id: 'c3',
+    id: uuidv4(),
     title: 'ALERTS',
     type: 'Vertical',
     toggles: [
       {
-        id: 'y0',
+        id: uuidv4(),
         label: 'ALERT MANAGER',
-        type: 'Basic'
+        type: 'Basic',
       },
       {
-        id: 'y1',
+        id: uuidv4(),
         label: 'ALERT RULES',
         type: 'NumberDropdown',
         min: 1,

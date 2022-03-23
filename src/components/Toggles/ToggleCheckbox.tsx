@@ -4,18 +4,20 @@ import styled from 'styled-components';
 interface ToggleCheckboxProps {
   id: string;
   handleToggle?: React.Dispatch<React.SetStateAction<boolean>>
+
 }
 
 const ToggleCheckbox = ({ id, handleToggle }: ToggleCheckboxProps) => {
+
   return (
     <ToggleCheckboxWrapper>
-      <Slider id={id} onChange={(e) => { if (handleToggle) { handleToggle(e.target.checked) } }} /><Notch htmlFor={id}></Notch>
-    </ToggleCheckboxWrapper>
+      <Handle id={id} onChange={(e) => { if (handleToggle) { handleToggle(e.target.checked) } }} /><Notch htmlFor={id}></Notch>
+    </ToggleCheckboxWrapper >
   );
 }
 
 const ToggleCheckboxWrapper = styled.div`
-  display: inline-block;
+  display: flex;
 `;
 
 const Notch = styled.label`
@@ -39,13 +41,24 @@ const Notch = styled.label`
 	}
 `;
 
-const Slider = styled.input.attrs({
-  type: 'checkbox',
+const Handle = styled.input.attrs({
+  type: 'checkbox'
 })`
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  background: #6f6f6f;
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  top: -5px;
+  left: -5px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  &:focus-visible + ${Notch} {
+    -webkit-box-shadow:inset 0px 0px 0px 2px var(--props-focus-ring-color);
+    -moz-box-shadow:inset 0px 0px 0px 2px var(--props-focus-ring-color);
+    box-shadow:inset 0px 0px 0px 2px var(--props-focus-ring-color);
+  }
   &:checked + ${Notch} {
     background: #5f97fb;
     &::after{

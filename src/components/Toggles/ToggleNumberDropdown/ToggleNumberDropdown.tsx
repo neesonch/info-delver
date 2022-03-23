@@ -16,10 +16,10 @@ const ToggleNumberDropdown = ({ label, id, min, max }: ToggleNumberDropdownProps
 
   return (
     <ToggleNumberDropdownWrapper>
-      <ToggleLabel>{label}</ToggleLabel>
+      <ToggleLabel htmlFor={id}>{label}</ToggleLabel>
       <ToggleCheckboxWrapper >
         <NumberDropdown min={min} max={max} active={active} />
-        <ToggleCheckbox id={`checkbox-${id}`} handleToggle={setActive} />
+        <ToggleCheckbox id={id} handleToggle={setActive} />
       </ToggleCheckboxWrapper>
     </ToggleNumberDropdownWrapper>
   )
@@ -29,7 +29,7 @@ const ToggleNumberDropdownWrapper = styled.div`
   display: flex
 `;
 
-const ToggleLabel = styled.div`
+const ToggleLabel = styled.label`
   display: flex;
   padding-left: 10%;
   flex-grow: 6;

@@ -18,6 +18,7 @@ function App({ schema }: AppProps) {
 
 const AppWrapper = styled.div`
   --props-default-background-color: #0d0d0f;
+  --props-focus-ring-color: #ff00ff;
 
   background-color: var(--props-default-background-color);
   color: white;
