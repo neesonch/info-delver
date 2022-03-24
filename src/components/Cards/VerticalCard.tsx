@@ -57,15 +57,11 @@ const TogglesContainer = styled.div`
 const ToggleWrapper = styled.div`
   display: inline-block;
   background: #18191d;
-  border-radius: 0.25em;
-  min-width: 95%;
-  padding-left: 0.3125em;
-  padding-right: 0.3125em;
+  border-radius: 0.3125em;
+  min-width: 98.5%;
   padding-top: 1em;
   padding-bottom: 1em;
   margin-top: 3px;
-  margin-left: auto;
-  margin-right: auto;
   &:last-child {
     margin-bottom: 3px;
   }
