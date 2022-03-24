@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Toggle } from 'schema';
-import ToggleCheckbox from '../ToggleCheckbox';
+import ToggleCheckbox from '../ToggleSlider';
 import ChildToggleList from './ChildToggleList';
 import Chevron from './Chevron';
 

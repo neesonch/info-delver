@@ -2,8 +2,8 @@ import React from 'react';
 import { Toggle, DropdownToggle, GroupToggle } from 'schema';
 import { BASIC, PARENT, NUMBER_DROPDOWN } from './constants';
 import BasicToggle from 'components/Toggles/BasicToggle';
-import ToggleGroup from 'components/Toggles/ToggleGroup/GroupToggle';
-import ToggleNumberDropdown from 'components/Toggles/ToggleNumberDropdown/ToggleNumberDropdown';
+import ToggleGroup from 'components/Toggles/GroupToggle/GroupToggle';
+import ToggleNumberDropdown from 'components/Toggles/SelectNumberToggle/SelectNumberToggle';
 
 const getToggleComponent = (toggle: Toggle | DropdownToggle | GroupToggle) => {
   const { label, id, type } = toggle;

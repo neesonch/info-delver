@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ToggleCheckbox from '../ToggleCheckbox';
+import ToggleCheckbox from '../ToggleSlider';
 import NumberDropdown from './NumberDropdown';
 
 interface ToggleNumberDropdownProps {
