@@ -1,6 +1,7 @@
 {
   "name": "info-delver",
   "version": "0.1.0",
+  "homepage": "https://neesonch.github.io/info-delver",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -25,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "e2e": "cypress open"
+    "e2e": "cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

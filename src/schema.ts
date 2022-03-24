@@ -101,11 +101,6 @@ export const schema: Card[] = [
           },
         ]
       },
-      {
-        id: uuidv4(),
-        label: 'SOME OTHER SETTING',
-        type: 'Basic',
-      },
     ],
   },
   {
@@ -124,99 +119,6 @@ export const schema: Card[] = [
         type: 'NumberDropdown',
         min: 1,
         max: 10,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    title: 'GENERAL',
-    type: 'Horizontal',
-    toggles: [
-      {
-        id: uuidv4(),
-        label: 'CASE MANAGEMENT',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'MAP TIMELINE',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'VIEWS & BRIEFINGS',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'NOTIFICATIONS',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'MASS COMMUNICATIONS',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'TRAFFIC CAMERAS',
-        type: 'Basic',
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    title: 'ALERTS',
-    type: 'Vertical',
-    toggles: [
-      {
-        id: uuidv4(),
-        label: 'ALERT MANAGER',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'ALERT RULES',
-        type: 'NumberDropdown',
-        min: 1,
-        max: 10,
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    title: 'GENERAL',
-    type: 'Horizontal',
-    toggles: [
-      {
-        id: uuidv4(),
-        label: 'CASE MANAGEMENT',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'MAP TIMELINE',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'VIEWS & BRIEFINGS',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'NOTIFICATIONS',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'MASS COMMUNICATIONS',
-        type: 'Basic',
-      },
-      {
-        id: uuidv4(),
-        label: 'TRAFFIC CAMERAS',
-        type: 'Basic',
       },
     ],
   },
