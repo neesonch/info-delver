@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 interface ToggleCheckboxProps {
   id: string;
-  handleToggle?: React.Dispatch<React.SetStateAction<boolean>>
-
+  handleToggle?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ToggleCheckbox = ({ id, handleToggle }: ToggleCheckboxProps) => {
@@ -62,7 +61,7 @@ const Handle = styled.input.attrs({
   &:checked + ${Notch} {
     background: #5f97fb;
     &::after{
-      left: calc(100% - 10px);
+      left: calc(100% - 15px);
     }
   }
 `;

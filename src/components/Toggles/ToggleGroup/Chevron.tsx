@@ -5,11 +5,14 @@ import styled from 'styled-components';
 
 interface ChevronProps {
   expanded: boolean;
+  handleClick?: () => void;
 }
 
-const Chevron = ({ expanded }: ChevronProps) => {
+const Chevron = ({ expanded, handleClick }: ChevronProps) => {
   return (
-    <ChevronWrapper expanded={expanded}><IoChevronDown /></ChevronWrapper>
+    <ChevronWrapper expanded={expanded} onClick={() => { if (handleClick) { handleClick() } }}>
+      <IoChevronDown />
+    </ChevronWrapper >
   )
 }
 
@@ -18,6 +21,7 @@ interface ChevronWrapper {
 }
 
 const ChevronWrapper = styled.div<ChevronWrapper>`
+cursor: pointer;
 display: inline-block;
 transition: all ease-in-out 0.3s;
 transform-origin: center;

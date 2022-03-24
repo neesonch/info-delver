@@ -16,12 +16,18 @@ const GroupToggle = ({ label, id, childToggles }: GroupToggleProps) => {
 
   const [expanded, setExpanded] = useState(false);
 
+  const handleChevronClick = () => {
+    setExpanded(!expanded);
+    const siblingCheckbox = document.getElementById(id);
+    siblingCheckbox && siblingCheckbox.click();
+  }
+
   return (
     <GroupToggleWrapper>
       <ParentToggleWrapper>
         <ToggleLabel htmlFor={id}> {label}</ToggleLabel>
         <ToggleCheckbox id={id} handleToggle={setExpanded} />
-        <Chevron expanded={expanded} />
+        <Chevron expanded={expanded} handleClick={handleChevronClick} />
       </ParentToggleWrapper>
       {childToggles && <ChildToggleList toggles={childToggles} expanded={expanded} />}
     </GroupToggleWrapper >

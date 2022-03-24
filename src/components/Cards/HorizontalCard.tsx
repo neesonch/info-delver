@@ -28,14 +28,14 @@ const HorizontalCard = ({ title, toggles }: HorizontalCardProps) => {
   )
 }
 
-const CardWrapper = styled.div`
+const CardWrapper = styled.section`
   flex-basis: 100%;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
 `;
 
-const CardTitle = styled.div`
+const CardTitle = styled.header`
   font-size: 1.125em;
   font-weight: bold;
   margin-top: 1em;

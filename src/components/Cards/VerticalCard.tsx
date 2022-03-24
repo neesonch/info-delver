@@ -30,7 +30,7 @@ const VerticalCard = ({ title, toggles }: VerticalCardProps) => {
   )
 }
 
-const CardWrapper = styled.div`
+const CardWrapper = styled.section`
   flex-basis: 33%;
   display: inline-block;
   @media (max-width: 768px) {
@@ -38,7 +38,7 @@ const CardWrapper = styled.div`
   }
 `;
 
-const CardTitle = styled.div`
+const CardTitle = styled.header`
   font-size: 1.125em;
   font-weight: bold;
   margin-top: 1em;
