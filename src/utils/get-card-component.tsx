@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card } from '../schema';
-import HorizontalCard from '../components/Cards/HorizontalCard';
-import VerticalCard from '../components/Cards/VerticalCard';
+import { Card } from 'schema';
+import HorizontalCard from 'components/Cards/HorizontalCard';
+import VerticalCard from 'components/Cards/VerticalCard';
 import { HORIZONTAL, VERTICAL } from './constants';
 
 const getCardComponent = (card: Card) => {

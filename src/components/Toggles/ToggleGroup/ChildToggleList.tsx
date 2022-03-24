@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Toggle } from '../../../schema';
-import getToggleComponent from '../../../utils/get-toggle-component';
+import { Toggle } from 'schema';
+import getToggleComponent from 'utils/get-toggle-component';
 
 interface ChildToggleListProps {
   toggles: Toggle[]

@@ -1,5 +1,5 @@
 import getCardComponent from './get-card-component';
-import { Card } from '../schema';
+import { Card } from 'schema';
 import { HORIZONTAL, VERTICAL } from './constants';
 
 

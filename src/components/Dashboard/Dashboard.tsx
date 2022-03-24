@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card } from '../../schema';
-import getCardComponent from '../../utils/get-card-component';
+import { Card } from 'schema';
+import getCardComponent from 'utils/get-card-component';
 
 interface DashboardProps {
   cards: Card[];

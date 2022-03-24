@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Toggle } from '../../../schema';
+import { Toggle } from 'schema';
 import ToggleCheckbox from '../ToggleCheckbox';
 import ChildToggleList from './ChildToggleList';
 import Chevron from './Chevron';

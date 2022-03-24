@@ -1,5 +1,5 @@
 import getToggleComponent from './get-toggle-component';
-import { Toggle, DropdownToggle, GroupToggle } from '../schema';
+import { Toggle, DropdownToggle, GroupToggle } from 'schema';
 import { BASIC, PARENT, NUMBER_DROPDOWN } from './constants';
 
 const mockData: (DropdownToggle | Toggle | GroupToggle)[] = [
