@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/info-delver/static/css/main.84015b88.css",
-    "main.js": "/info-delver/static/js/main.2b23b678.js",
+    "main.js": "/info-delver/static/js/main.0aeb9c44.js",
     "static/js/787.478d8812.chunk.js": "/info-delver/static/js/787.478d8812.chunk.js",
     "static/media/Teko-SemiBold.ttf": "/info-delver/static/media/Teko-SemiBold.724eb0b1a36d7ef5af54.ttf",
     "index.html": "/info-delver/index.html",
     "main.84015b88.css.map": "/info-delver/static/css/main.84015b88.css.map",
-    "main.2b23b678.js.map": "/info-delver/static/js/main.2b23b678.js.map",
+    "main.0aeb9c44.js.map": "/info-delver/static/js/main.0aeb9c44.js.map",
     "787.478d8812.chunk.js.map": "/info-delver/static/js/787.478d8812.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84015b88.css",
-    "static/js/main.2b23b678.js"
+    "static/js/main.0aeb9c44.js"
   ]
 }
