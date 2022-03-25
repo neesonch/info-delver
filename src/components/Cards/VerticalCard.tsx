@@ -49,7 +49,7 @@ const CardTitle = styled.header`
 const TogglesContainer = styled.div`
   margin-left: 5%;
   margin-right: auto;
-  background-color: #292e31;
+  background-color: var(--props-vertical-card-background);
   border-radius: 0.2em;
   text-align: center;
   @media (max-width: 768px) {

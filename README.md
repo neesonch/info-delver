@@ -61,5 +61,8 @@ The layout is responsive - in mobile portrait view, all cards (and their child t
 
 The layout is keyboard accessible (Tab/Shift-tab to move the cursor forward and backward between toggles, Spacebar to enable/disable a highlighted toggle).
 
+Colours are defined via CSS variables as a stepping-off point for future implementation of theming.
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

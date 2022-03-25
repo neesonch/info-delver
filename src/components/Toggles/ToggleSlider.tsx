@@ -24,14 +24,14 @@ const Notch = styled.label`
   position: relative;
   width: 35px;
 	height: 15px;
-	background: #e4e5df;
+	background: var(--props-inactive-toggle-color);
 	display: block;
 	border-radius: 100px;
   &::after {
     content: '';
     width: 15px;
     height: 15px;
-    background: #fff;
+    background: var(--props-toggle-handle-color);
     border-radius: 50%;
     transition: 0.3s;
     position: absolute;
@@ -59,7 +59,7 @@ const Handle = styled.input.attrs({
     box-shadow:inset 0px 0px 0px 2px var(--props-focus-ring-color);
   }
   &:checked + ${Notch} {
-    background: #5f97fb;
+    background: var(--props-active-toggle-color);
     &::after{
       left: calc(100% - 15px);
     }

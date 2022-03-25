@@ -28,13 +28,13 @@ const DropdownWrapper = styled.div`
 `;
 
 const DropdownSelect = styled.select`
-  color: white;
-  background-color: #101012;
+  color: var( --props-default-font-color);
+  background-color: var(--props-select-background-color);
   border: none;
   width: 4.5em;
   padding-left: 0.75em;
   &:disabled {
-    color: dimgrey;
+    color: var(--props-disabled-font-color);
   }
 `;
 
