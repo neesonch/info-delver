@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import styled from 'styled-components';
 import { Card } from './schema';
 import Dashboard from './components/Dashboard/Dashboard';

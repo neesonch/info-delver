@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Info Delver - Settings Dashboard
+
+
+## Setup
+
+Clone and install repo:
+
+### `git clone https://github.com/neesonch/info-delver`
+
+### `cd info-delver && yarn` 
+or 
+### `cd info-delver && npm install`
+
+## Run locally
+
+Navigate to root folder of project and start app with:
+
+### `yarn start` 
+or 
+### `npm run start`
+
+If not automatically redirected, navigate to http://localhost:3000 in browser to view.
+
+## View live version
+
+https://neesonch.github.io/info-delver
+
+## Testing
+
+To run unit and integration tests:
+### `yarn test` 
+or 
+### `npm run test`
+
+To run e2e tests (via Cypress):
+### `yarn e2e` 
+or 
+### `npm run e2e`
+
+## Deployments
+
+To deploy updates to live version hosted at Github Pages:
+### `yarn deploy` 
+or 
+### `npm run deploy`
+
+
+## Implementation Notes
+
+Layout of dashboard is implemented with CSS Flexbox and Styled Components. The reasoning behind using Flexbox (as opposed to, e.g., CSS Grid) was imagining a CMS-style setup where the dashboard consumes a dynamic and configurable list of various types of card, each containing its own configurable list of various types of toggle - i.e., the exact layout is not known ahead of time. Instead, the component accepts a card list of arbitrary length and lays them out according to the following logic:
+- Horizontal cards occupy the full width of a row and divide child toggles into three columns.
+- Vertical cards occupy one third of a row and display child toggles in a single column. Up to three Vertical cards can be displayed in the same row, aligned to the left.
+- A Horizontal card will always start a new row
+- The height of each row is determined by the height of its tallest card
+
+To see this in action, the `schema` array variable in schema.ts file can be edited when running the app locally to test different combinations of cards, for example:
+
+![Image](https://i.imgur.com/W8FuH4P.png)
+
+The layout is responsive - in mobile portrait view, all cards (and their child toggles) are collapsed into a single column.
+
+The layout is keyboard accessible (Tab/Shift-tab to move the cursor forward and backward between toggles, Spacebar to enable/disable a highlighted toggle).
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
