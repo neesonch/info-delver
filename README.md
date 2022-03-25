@@ -5,19 +5,19 @@
 
 Clone and install repo:
 
-### `git clone https://github.com/neesonch/info-delver`
+ `git clone https://github.com/neesonch/info-delver`
 
-### `cd info-delver && yarn` 
+`cd info-delver && yarn` 
 or 
-### `cd info-delver && npm install`
+`cd info-delver && npm install`
 
 ## Run locally
 
 Navigate to root folder of project and start app with:
 
-### `yarn start` 
+`yarn start` 
 or 
-### `npm run start`
+`npm run start`
 
 If not automatically redirected, navigate to http://localhost:3000 in browser to view.
 
@@ -28,21 +28,21 @@ https://neesonch.github.io/info-delver
 ## Testing
 
 To run unit and integration tests:
-### `yarn test` 
+`yarn test` 
 or 
-### `npm run test`
+`npm run test`
 
 To run e2e tests (via Cypress):
-### `yarn e2e` 
+`yarn e2e` 
 or 
-### `npm run e2e`
+`npm run e2e`
 
 ## Deployments
 
 To deploy updates to live version hosted at Github Pages:
-### `yarn deploy` 
+`yarn deploy` 
 or 
-### `npm run deploy`
+`npm run deploy`
 
 
 ## Implementation Notes
