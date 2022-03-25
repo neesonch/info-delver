@@ -53,15 +53,15 @@ Layout of dashboard is implemented with CSS Flexbox and Styled Components. The r
 - A Horizontal card will always start a new row
 - The height of each row is determined by the height of its tallest card
 
-To see this in action, the `schema` array variable in schema.ts file can be edited when running the app locally to test different combinations of cards, for example:
+To see this in action, the `schema` array variable in schema.ts file can be edited when running the app locally to test different combinations of cards. Example with duplciated cards:
 
-![Image](https://i.imgur.com/W8FuH4P.png)
+![Image](https://i.imgur.com/eApkIZ6.png)
 
 The layout is responsive - in mobile portrait view, all cards (and their child toggles) are collapsed into a single column.
 
 The layout is keyboard accessible (Tab/Shift-tab to move the cursor forward and backward between toggles, Spacebar to enable/disable a highlighted toggle).
 
-Colours are defined via CSS variables as a stepping-off point for future implementation of theming.
+Colours are defined via CSS variables for maintainability.
 
 ---
 
