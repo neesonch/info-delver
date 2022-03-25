@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ToggleCheckbox from './ToggleSlider';
+import ToggleCheckbox from '../ToggleSlider';
 
 
 interface BasicToggleProp {

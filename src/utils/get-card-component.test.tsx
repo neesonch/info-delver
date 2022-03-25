@@ -32,7 +32,6 @@ const mockData: Card[] = [
 
 describe('getCardComponent', () => {
   test('Returns correct React components for given type', () => {
-    console.log()
     const horizontalCard = getCardComponent(mockData[0])
     expect(horizontalCard?.type.name).toBe('HorizontalCard');
 

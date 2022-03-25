@@ -52,6 +52,9 @@ const TogglesContainer = styled.div`
   background-color: #292e31;
   border-radius: 0.2em;
   text-align: center;
+  @media (max-width: 768px) {
+    margin-left: auto;
+  }
 `;
 
 const ToggleWrapper = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Toggle } from 'schema';
-import BasicToggle from 'components/Toggles/BasicToggle';
+import BasicToggle from 'components/Toggles/BasicToggle/BasicToggle';
 
 interface HorizontalCardProps {
   title: string;
