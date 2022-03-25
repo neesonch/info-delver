@@ -53,7 +53,7 @@ Layout of dashboard is implemented with CSS Flexbox and Styled Components. The r
 - A Horizontal card will always start a new row
 - The height of each row is determined by the height of its tallest card
 
-To see this in action, the `schema` array variable in schema.ts file can be edited when running the app locally to test different combinations of cards. Example with duplicated cards:
+To see this in action, the `schema` array variable in the `schema.ts` file can be edited when running the app locally to test different combinations of cards. Example with duplicated cards:
 
 ![Image](https://i.imgur.com/eApkIZ6.png)
 
